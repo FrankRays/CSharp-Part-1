@@ -1,0 +1,19 @@
+1. NetBeans
+
+NetBeans IDE is a free and open source integrated development environment for application development on Windows, Mac, Linux, and Solaris operating systems. The IDE simplifies the development of web, enterprise, desktop, and mobile applications that use the Java and HTML5 platforms. The IDE also offers support for the development of PHP and C/C++ applications.
+
+2. Eclipse
+
+It contains a base workspace and an extensible plug-in system for customizing the environment. Written mostly in Java, Eclipse can be used to develop applications. By means of various plug-ins, Eclipse may also be used to develop applications in other programming languages: Ada, ABAP, C, C++, COBOL, Fortran, Haskell, JavaScript, Lasso, Natural, Perl, PHP, Prolog, Python, R, Ruby (including Ruby on Rails framework), Scala, Clojure, Groovy, Scheme, and Erlang. It can also be used to develop packages for the software Mathematica.
+
+3. Code::Blocks
+
+Code::Blocks is a free, open source cross-platform IDE which supports multiple compilers including GCC, Clang and Visual C++. Using a plugin architecture, its capabilities and features are defined by the provided plugins. Currently, Code::Blocks is oriented towards C, C++, and Fortran. Code::Blocks is being developed for Windows, Linux, and Mac OS X and has been ported to FreeBSD, OpenBSD and Solaris.
+
+4. Aptana
+
+Aptana Studio is an open source integrated development environment (IDE) for building web applications. Based on Eclipse, it supports JavaScript, HTML, DOM and CSS with code-completion, outlining, JavaScript debugging, error and warning notifications and integrated documentation. Additional plugins allow Aptana Studio to support Ruby on Rails, PHP, Python, Perl, Adobe AIR, Apple iPhone and Nokia WRT (Web Runtime). Aptana Studio is available as a standalone on Windows, Mac OS X and Linux, or as a plugin for Eclipse.
+
+5. PyCharm
+
+PyCharm is an Integrated Development Environment (IDE) used for programming in Python. It provides code analysis, a graphical debugger, an integrated unit tester, integration with version control systems (VCSes), and supports web development with Django. PyCharm is developed by the Czech company JetBrains.
