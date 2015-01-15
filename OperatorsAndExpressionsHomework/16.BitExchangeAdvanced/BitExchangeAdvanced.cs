@@ -1,4 +1,5 @@
-﻿//
+﻿//Write a program that exchanges bits {p, p+1, …, p+k-1} with bits {q, q+1, …, q+k-1} of a given 32-bit unsigned integer.
+//The first and the second sequence of bits may not overlapл
 using System;
 class BitExchangeAdvanced
 {
@@ -59,6 +60,5 @@ class BitExchangeAdvanced
             Environment.Exit(1);
         }
         Console.WriteLine(Convert.ToInt64(exchangedBitNumber, 2));
-        Main();
     }
 }
