@@ -5,7 +5,7 @@ class BitNo3
     static void Main()
     {
         int number = Int32.Parse(Console.ReadLine());
-        if ((number & 8)==8)
+        if ((number & 8) == 8)
         {
             Console.WriteLine(1);
         }

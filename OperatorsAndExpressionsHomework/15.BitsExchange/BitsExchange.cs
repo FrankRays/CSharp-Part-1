@@ -9,8 +9,8 @@ class BitsExchange
         int increment = 2;
         long number = Int64.Parse(Console.ReadLine());
         string bitRepresentation = Convert.ToString(number, 2);
-        string smallBlock = "";
-        string bigBlock = "";
+        string lowBlock = "";
+        string highBlock = "";
         string exchangedBitNumber = "";
         if (bitRepresentation.Length < 27)
         {
@@ -18,22 +18,22 @@ class BitsExchange
         }
         for (int i = lowIndex + increment; i >= lowIndex; i--)
         {
-            smallBlock += Convert.ToString(bitRepresentation[bitRepresentation.Length - 1 - i]);
+            lowBlock += Convert.ToString(bitRepresentation[bitRepresentation.Length - 1 - i]);
         }
         for (int j = highIndex + increment; j >= highIndex; j--)
         {
-            bigBlock += Convert.ToString(bitRepresentation[bitRepresentation.Length - 1 - j]);
+            highBlock += Convert.ToString(bitRepresentation[bitRepresentation.Length - 1 - j]);
         }
         for (int k = 0; k < bitRepresentation.Length - 1 - highIndex - increment; k++)
         {
             exchangedBitNumber += Convert.ToString(bitRepresentation[k]);
         }
-        exchangedBitNumber += smallBlock;
+        exchangedBitNumber += lowBlock;
         for (int l = bitRepresentation.Length - highIndex; l < bitRepresentation.Length - 1 - lowIndex - increment; l++)
         {
             exchangedBitNumber += Convert.ToString(bitRepresentation[l]);
         }
-        exchangedBitNumber += bigBlock;
+        exchangedBitNumber += highBlock;
         for (int m = bitRepresentation.Length - lowIndex; m < bitRepresentation.Length; m++)
         {
             exchangedBitNumber += Convert.ToString(bitRepresentation[m]);

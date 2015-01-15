@@ -1,5 +1,5 @@
 ﻿//Write a program that exchanges bits {p, p+1, …, p+k-1} with bits {q, q+1, …, q+k-1} of a given 32-bit unsigned integer.
-//The first and the second sequence of bits may not overlapл
+//The first and the second sequence of bits may not overlap.
 using System;
 class BitExchangeAdvanced
 {
@@ -17,8 +17,8 @@ class BitExchangeAdvanced
             highIndex = switchValue;
         }
         string bitRepresentation = Convert.ToString(number, 2);
-        string smallBlock = "";
-        string bigBlock = "";
+        string lowBlock = "";
+        string highBlock = "";
         string exchangedBitNumber = "";
         try
         {
@@ -28,22 +28,22 @@ class BitExchangeAdvanced
             }
             for (int i = lowIndex + increment; i >= lowIndex; i--)
             {
-                smallBlock += Convert.ToString(bitRepresentation[bitRepresentation.Length - 1 - i]);
+                lowBlock += Convert.ToString(bitRepresentation[bitRepresentation.Length - 1 - i]);
             }
             for (int j = highIndex + increment; j >= highIndex; j--)
             {
-                bigBlock += Convert.ToString(bitRepresentation[bitRepresentation.Length - 1 - j]);
+                highBlock += Convert.ToString(bitRepresentation[bitRepresentation.Length - 1 - j]);
             }
             for (int k = 0; k < bitRepresentation.Length - 1 - highIndex - increment; k++)
             {
                 exchangedBitNumber += Convert.ToString(bitRepresentation[k]);
             }
-            exchangedBitNumber += smallBlock;
+            exchangedBitNumber += lowBlock;
             for (int l = bitRepresentation.Length - highIndex; l < bitRepresentation.Length - 1 - lowIndex - increment; l++)
             {
                 exchangedBitNumber += Convert.ToString(bitRepresentation[l]);
             }
-            exchangedBitNumber += bigBlock;
+            exchangedBitNumber += highBlock;
             for (int m = bitRepresentation.Length - lowIndex; m < bitRepresentation.Length; m++)
             {
                 exchangedBitNumber += Convert.ToString(bitRepresentation[m]);
