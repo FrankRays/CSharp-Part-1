@@ -9,6 +9,6 @@ class AgeAfter10Years
         //that is the only information needed for this problem
         //in order to get to the age in 10 years' time.
         int birthYear = Int32.Parse(Console.ReadLine());
-        Console.WriteLine("In 10 years' time you will be " + (2024-birthYear) + " years old.");
+        Console.WriteLine("In 10 years' time you will be " + (DateTime.Now.Year + 10 - birthYear) + " years old.");
     }
 }
