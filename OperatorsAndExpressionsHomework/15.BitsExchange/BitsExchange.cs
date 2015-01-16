@@ -7,7 +7,7 @@ class BitsExchange
         int lowIndex = 3;
         int highIndex = 24;
         int increment = 2;
-        long number = Int64.Parse(Console.ReadLine());
+        long number = UInt32.Parse(Console.ReadLine());
         string bitRepresentation = Convert.ToString(number, 2);
         string lowBlock = "";
         string highBlock = "";
