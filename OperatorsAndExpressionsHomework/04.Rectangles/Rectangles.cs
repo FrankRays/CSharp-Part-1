@@ -6,7 +6,9 @@ class Rectangles
     {
         double width = Double.Parse(Console.ReadLine());
         double height = Double.Parse(Console.ReadLine());
+        double perimeter = 2 * (width + height);
         double area = width * height;
+        Console.WriteLine(perimeter);
         Console.WriteLine(area);
     }
 }
