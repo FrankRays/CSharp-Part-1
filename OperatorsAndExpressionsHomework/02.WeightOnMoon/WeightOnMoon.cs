@@ -5,6 +5,8 @@ class WeightOnMoon
 {
     static void Main()
     {
-        Console.WriteLine(0.17 * Double.Parse(Console.ReadLine()));
+        double weightOnEarth = Double.Parse(Console.ReadLine());
+        double weightOnMoon = 0.17 * weightOnEarth;
+        Console.WriteLine(weightOnMoon);
     }
 }

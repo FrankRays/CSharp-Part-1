@@ -10,10 +10,18 @@ class FourDigitNumber
     static void Main()
     {
         int number = Int32.Parse(Console.ReadLine());
-        int sumOfDigits = number / 1000 + (number / 100) % 10 + (number / 10) % 10 + number % 10;
-        int reversedDigitsOrder = (number % 10) * 1000 + ((number / 10) % 10) * 100 + ((number / 100) % 10) * 10 + number / 1000;
-        int lastDigitInFront = (number % 10) * 1000 + number / 10;
-        int exchangedThirdAndSecondDigit = number / 1000 * 1000 + ((number / 100) % 10) * 10 + ((number / 10) % 10) * 100 + number % 10;
+
+        //Digit counting starts from right to left.
+        int firstDigit = number % 10;
+        int secondDigit = (number / 10) % 10;
+        int thirdDigit = (number / 100) % 10;
+        int fourthDigit = number / 1000;
+
+        int sumOfDigits = firstDigit + secondDigit + thirdDigit + fourthDigit;
+        int reversedDigitsOrder = firstDigit * 1000 + secondDigit * 100 + thirdDigit * 10 + fourthDigit;
+        int lastDigitInFront = firstDigit * 1000 + number / 10;
+        int exchangedThirdAndSecondDigit = fourthDigit * 1000 + thirdDigit * 10 + secondDigit * 100 + firstDigit;
+
         Console.WriteLine(sumOfDigits);
         Console.WriteLine(reversedDigitsOrder);
         Console.WriteLine(lastDigitInFront);

@@ -7,7 +7,8 @@ class CheckABitAtGivenPosition
     {
         int number = Int32.Parse(Console.ReadLine());
         int position = Int32.Parse(Console.ReadLine());
-        bool isBitEqualToOne = ((number & (int)Math.Pow(2, position)) == Math.Pow(2, position));
+        number = (number >> position) & 1;
+        bool isBitEqualToOne = (number == 1);
         Console.WriteLine(isBitEqualToOne);
     }
 }

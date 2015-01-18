@@ -5,6 +5,7 @@ class ThirdDigitIs7
     static void Main()
     {
         int number = Int32.Parse(Console.ReadLine());
-        Console.WriteLine((number / 100) % 10 == 7);
+        bool isSeven = (number / 100) % 10 == 7;
+        Console.WriteLine(isSeven);
     }
 }

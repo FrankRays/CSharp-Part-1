@@ -6,7 +6,7 @@ class DivideBy7And5
     static void Main()
     {
         int number = Int32.Parse(Console.ReadLine());
-        bool isDivisible = number % 5 == 0 && number % 7 == 0;
+        bool isDivisible = (number % 5 == 0) && (number % 7 == 0);
         Console.WriteLine(isDivisible);
     }
 }

@@ -4,6 +4,7 @@ class OddOrEven
 {
     static void Main()
     {
-        Console.WriteLine(Int32.Parse(Console.ReadLine()) % 2 != 0);
+        int numberInput = Int32.Parse(Console.ReadLine());
+        Console.WriteLine("Odd = {0}",numberInput % 2 != 0);
     }
 }

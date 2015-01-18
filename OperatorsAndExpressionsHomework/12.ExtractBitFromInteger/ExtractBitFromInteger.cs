@@ -6,13 +6,7 @@ class ExtractBitFromInteger
     {
         int number = Int32.Parse(Console.ReadLine());
         int position = Int32.Parse(Console.ReadLine());
-        if ((number & (int)Math.Pow(2, position)) == Math.Pow(2, position))
-        {
-            Console.WriteLine(1);
-        }
-        else
-        {
-            Console.WriteLine(0);
-        }
+        number = (number >> position) & 1;
+        Console.WriteLine(number);
     }
 }

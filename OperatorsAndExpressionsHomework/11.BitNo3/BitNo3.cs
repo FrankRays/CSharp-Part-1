@@ -4,14 +4,9 @@ class BitNo3
 {
     static void Main()
     {
+        int position = 3;
         int number = Int32.Parse(Console.ReadLine());
-        if ((number & 8) == 8)
-        {
-            Console.WriteLine(1);
-        }
-        else
-        {
-            Console.WriteLine(0);
-        }
+        number = (number >> position) & 1;
+        Console.WriteLine(number);
     }
 }

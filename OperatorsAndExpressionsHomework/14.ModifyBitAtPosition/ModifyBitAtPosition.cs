@@ -8,13 +8,16 @@ class ModifyBitAtPosition
         int number = Int32.Parse(Console.ReadLine());
         int position = Int32.Parse(Console.ReadLine());
         int bitValue = Int32.Parse(Console.ReadLine());
+        int mask;
         if (bitValue == 0)
         {
-            Console.WriteLine((number & (int)(Math.Pow(2,Convert.ToString(number,2).Length) - Math.Pow(2, position) - 1)));
+            mask = ~(1 << position);
+            Console.WriteLine(number & mask);
         }
         else
         {
-            Console.WriteLine((number | (int)Math.Pow(2, position)));
+            mask = 1 << position;
+            Console.WriteLine(number | mask);
         }
     }
 }

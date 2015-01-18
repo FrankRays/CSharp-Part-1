@@ -7,7 +7,10 @@ class BitsExchange
         int lowIndex = 3;
         int highIndex = 24;
         int increment = 2;
-        long number = UInt32.Parse(Console.ReadLine());
+        uint number = UInt32.Parse(Console.ReadLine());
+
+        //My idea is to convert the number to binary stored in a string and
+        //switch parts of it to get the new one and then convert it back to decimal.
         string bitRepresentation = Convert.ToString(number, 2);
         string lowBlock = "";
         string highBlock = "";
@@ -38,6 +41,6 @@ class BitsExchange
         {
             exchangedBitNumber += Convert.ToString(bitRepresentation[m]);
         }
-        Console.WriteLine(Convert.ToInt64(exchangedBitNumber, 2));
+        Console.WriteLine(Convert.ToUInt32(exchangedBitNumber, 2));
     }
 }
