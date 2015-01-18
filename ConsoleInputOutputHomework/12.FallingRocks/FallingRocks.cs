@@ -53,8 +53,8 @@ class FallingRocks
         Dwarf userDwarf = new Dwarf();
         userDwarf.x = 39;
         userDwarf.y = Console.WindowHeight - 1;
-        userDwarf.str = "(O)";
-        userDwarf.color = ConsoleColor.DarkGreen;
+        userDwarf.str = "(=)";
+        userDwarf.color = ConsoleColor.Green;
 
         Random randomGenerator = new Random();
 
@@ -79,31 +79,31 @@ class FallingRocks
                 //the play speed.
                 if (probability >= 90 - speed)
                 {
-                    Rock newRock = new Rock();
-                    newRock.x = randomGenerator.Next(0, playfieldWidth);
-                    newRock.y = 0;
+                    Rock smallRock = new Rock();
+                    smallRock.x = randomGenerator.Next(0, playfieldWidth);
+                    smallRock.y = 0;
                     int chance = randomGenerator.Next(0, 100);
                     if (chance < 15)
                     {
-                        newRock.str = "%";
-                        newRock.color = ConsoleColor.DarkGray;
+                        smallRock.str = "%";
+                        smallRock.color = ConsoleColor.DarkGray;
                     }
                     else if (chance > 7 && chance < 50)
                     {
-                        newRock.str = "@";
-                        newRock.color = ConsoleColor.DarkMagenta;
+                        smallRock.str = "@";
+                        smallRock.color = ConsoleColor.DarkMagenta;
                     }
                     else if (chance > 50 && chance < 80)
                     {
-                        newRock.str = "+";
-                        newRock.color = ConsoleColor.Yellow;
+                        smallRock.str = "+";
+                        smallRock.color = ConsoleColor.Yellow;
                     }
                     else
                     {
-                        newRock.str = "/";
-                        newRock.color = ConsoleColor.Blue;
+                        smallRock.str = "/";
+                        smallRock.color = ConsoleColor.Blue;
                     }
-                    rocks.Add(newRock);
+                    rocks.Add(smallRock);
                 }
             }
 
@@ -192,11 +192,13 @@ class FallingRocks
             {
                 PrintOnConsole(rock.x, rock.y, rock.str, rock.color);
             }
+
             //Draw info.
             PrintStringOnConsole(95, 10, "Lives: " + livesCount, ConsoleColor.White);
             PrintStringOnConsole(95, 12, "Speed: " + speed, ConsoleColor.White);
             PrintStringOnConsole(95, 14, "Score: " + score, ConsoleColor.White);
-            PrintStringOnConsole(95, 22, "High Score: " + highScore, ConsoleColor.Cyan);
+            PrintStringOnConsole(95, 22, "High Score: " + highScore, ConsoleColor.DarkCyan);
+
             //Slow down program.
             Thread.Sleep((int)(100 - speed));
         }
