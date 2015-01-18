@@ -6,16 +6,16 @@ class ExchangeVariableValues
 {
     static void Main()
     {
-        int a = 5;
-        int b = 10;
-        Console.WriteLine("a = {0}", a);
-        Console.WriteLine("b = {0}", b);
+        int variableA = 5;
+        int variableB = 10;
+        Console.WriteLine("a = {0}", variableA);
+        Console.WriteLine("b = {0}", variableB);
 
-        int carrier = a;
-        a = b;
-        b = carrier;
+        int helpVariable = variableA;
+        variableA = variableB;
+        variableB = helpVariable;
         Console.WriteLine("----------");
-        Console.WriteLine("a = {0}", a);
-        Console.WriteLine("b = {0}", b);
+        Console.WriteLine("a = {0}", variableA);
+        Console.WriteLine("b = {0}", variableB);
     }
 }

@@ -7,11 +7,11 @@ class PrintTheASCIITable
     static void Main()
     {
         Console.OutputEncoding = Encoding.ASCII;
+        Console.BufferHeight = 255;
         for (byte counter = 0; counter < 255; counter++)
         {
             Console.Write("0x{0:X}  ", counter);
             Console.WriteLine(" {0}  ", (char)counter);
-
         }
     }
 }

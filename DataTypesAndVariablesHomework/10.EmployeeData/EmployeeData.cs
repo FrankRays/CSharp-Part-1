@@ -11,12 +11,15 @@ class EmployeeData
         string lastName = "Smith";
         byte age = 31;
         char gender = 'm';
+
         //If one of the employees is born in 2000, then we should use type string,
         //but since a 14-year-old working in a company is highly unlikely,
         //then we simply use type long.
         long personalIDNumber = 8306112507;
+
         //If some of the unique employee numbers start with a '0',
         //then we should use type string.
+
         int employeeNumber = 27560000;
         Console.WriteLine("First Name:\t\t" + firstName);
         Console.WriteLine("Last Name:\t\t" + lastName);

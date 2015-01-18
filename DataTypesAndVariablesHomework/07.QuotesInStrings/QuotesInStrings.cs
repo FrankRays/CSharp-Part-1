@@ -6,9 +6,9 @@ class QuotesInStrings
 {
     static void Main()
     {
-        string firstString = "The \"use\" of quotations causes difficulties.";
-        string secondString = @"The ""use"" of quotations causes difficulties.";
-        Console.WriteLine(firstString);
-        Console.WriteLine(secondString);
+        string stringWithEscapingSequences = "The \"use\" of quotations causes difficulties.";
+        string stringWithoutEscapingSequences = @"The ""use"" of quotations causes difficulties.";
+        Console.WriteLine(stringWithEscapingSequences);
+        Console.WriteLine(stringWithoutEscapingSequences);
     }
 }
