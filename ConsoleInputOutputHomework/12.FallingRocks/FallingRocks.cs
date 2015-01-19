@@ -16,7 +16,7 @@ struct Rock
 {
     public int x;
     public int y;
-    public string str;
+    public char c;
     public ConsoleColor color;
 }
 class FallingRocks
@@ -39,11 +39,13 @@ class FallingRocks
     static void Main()
     {
         //Sets the borders of the console window.
-        Console.BufferHeight = Console.WindowHeight = 34;
-        Console.BufferWidth = Console.WindowWidth = 121;
+        Console.BufferHeight = Console.WindowHeight = 3 * Console.WindowWidth / 10;
+        Console.BufferWidth = Console.WindowWidth = 70;
+
+        Console.Title = "-----FALLING--ROCKS-----";
 
         //Defines main parameters of the game.
-        int playfieldWidth = 81;
+        int playfieldWidth = 3 * Console.WindowWidth / 4;
         int livesCount = 5;
         decimal speed = 0;
         int score = 0;
@@ -51,15 +53,18 @@ class FallingRocks
 
         //Defines the dwarf and its starting position on the console.
         Dwarf userDwarf = new Dwarf();
-        userDwarf.x = 39;
+        userDwarf.x = playfieldWidth / 2;
         userDwarf.y = Console.WindowHeight - 1;
-        userDwarf.str = "(=)";
+        userDwarf.str = "(O)";
         userDwarf.color = ConsoleColor.Green;
 
         Random randomGenerator = new Random();
 
         //Defines the list in which each rock will be stored.
         List<Rock> rocks = new List<Rock>();
+        char[] typeOfRocks = { '@', '#', '$', '%', '^', '&', '/', '+', '¤', };
+
+        ConsoleColor[] colors = { ConsoleColor.Yellow, ConsoleColor.Magenta, ConsoleColor.Gray, ConsoleColor.Blue, ConsoleColor.White };
 
         //Initializes the execution of the game.
         while (true)
@@ -80,29 +85,33 @@ class FallingRocks
                 if (probability >= 90 - speed)
                 {
                     Rock smallRock = new Rock();
-                    smallRock.x = randomGenerator.Next(0, playfieldWidth);
+                    smallRock.x = randomGenerator.Next(0, playfieldWidth + 1);
                     smallRock.y = 0;
-                    int chance = randomGenerator.Next(0, 100);
-                    if (chance < 15)
-                    {
-                        smallRock.str = "%";
-                        smallRock.color = ConsoleColor.DarkGray;
-                    }
-                    else if (chance > 7 && chance < 50)
-                    {
-                        smallRock.str = "@";
-                        smallRock.color = ConsoleColor.DarkMagenta;
-                    }
-                    else if (chance > 50 && chance < 80)
-                    {
-                        smallRock.str = "+";
-                        smallRock.color = ConsoleColor.Yellow;
-                    }
-                    else
-                    {
-                        smallRock.str = "/";
-                        smallRock.color = ConsoleColor.Blue;
-                    }
+                    int chanceOfAppearance = randomGenerator.Next(0, 100);
+                    int chanceOfTypeOfRock = randomGenerator.Next(0, 9);
+                    int chanceOfColor = randomGenerator.Next(0, 4);
+                    smallRock.c = typeOfRocks[chanceOfTypeOfRock];
+                    smallRock.color = colors[chanceOfColor]; ;
+                    //if (chance < 15)
+                    //{
+                    //    smallRock.str = "%";
+                    //    smallRock.color = ConsoleColor.DarkGray;
+                    //}
+                    //else if (chance > 7 && chance < 50)
+                    //{
+                    //    smallRock.str = "@";
+                    //    smallRock.color = ConsoleColor.DarkMagenta;
+                    //}
+                    //else if (chance > 50 && chance < 80)
+                    //{
+                    //    smallRock.str = "+";
+                    //    smallRock.color = ConsoleColor.Yellow;
+                    //}
+                    //else
+                    //{
+                    //    smallRock.str = "/";
+                    //    smallRock.color = ConsoleColor.Blue;
+                    //}
                     rocks.Add(smallRock);
                 }
             }
@@ -136,7 +145,7 @@ class FallingRocks
                 Rock newRock = new Rock();
                 newRock.x = oldRock.x;
                 newRock.y = oldRock.y + 1;
-                newRock.str = oldRock.str;
+                newRock.c = oldRock.c;
                 newRock.color = oldRock.color;
 
                 //Checks for collisions with the dwarf.
@@ -152,9 +161,8 @@ class FallingRocks
                         PrintOnConsole(userDwarf.x, userDwarf.y, "X", ConsoleColor.Red);
                         PrintOnConsole(userDwarf.x + 1, userDwarf.y, "X", ConsoleColor.Red);
                         PrintOnConsole(userDwarf.x + 2, userDwarf.y, "X", ConsoleColor.Red);
-                        PrintStringOnConsole(95, 17, "GAME OVER!!!", ConsoleColor.Red);
-                        PrintStringOnConsole(95, 18, "Press [enter] to exit...", ConsoleColor.Red);
-                        Console.ReadLine();
+                        PrintStringOnConsole(4 * Console.WindowWidth / 5, 12, "GAME OVER!!!", ConsoleColor.Red);
+                        Console.SetCursorPosition(0, 0);
                         Environment.Exit(0);
                     }
                 }
@@ -181,7 +189,7 @@ class FallingRocks
                 PrintOnConsole(userDwarf.x, userDwarf.y, "X", ConsoleColor.Red);
                 PrintOnConsole(userDwarf.x + 1, userDwarf.y, "X", ConsoleColor.Red);
                 PrintOnConsole(userDwarf.x + 2, userDwarf.y, "X", ConsoleColor.Red);
-                userDwarf.x = 39;
+                userDwarf.x = playfieldWidth / 2;
                 userDwarf.y = Console.WindowHeight - 1;
             }
             else
@@ -190,14 +198,15 @@ class FallingRocks
             }
             foreach (Rock rock in rocks)
             {
-                PrintOnConsole(rock.x, rock.y, rock.str, rock.color);
+                PrintOnConsole(rock.x, rock.y, rock.c.ToString(), rock.color);
             }
 
             //Draw info.
-            PrintStringOnConsole(95, 10, "Lives: " + livesCount, ConsoleColor.White);
-            PrintStringOnConsole(95, 12, "Speed: " + speed, ConsoleColor.White);
-            PrintStringOnConsole(95, 14, "Score: " + score, ConsoleColor.White);
-            PrintStringOnConsole(95, 22, "High Score: " + highScore, ConsoleColor.DarkCyan);
+            PrintStringOnConsole(4 * Console.WindowWidth / 5, 6, "Lives: " + livesCount, ConsoleColor.White);
+            PrintStringOnConsole(4 * Console.WindowWidth / 5, 8, "Speed: " + speed, ConsoleColor.White);
+            PrintStringOnConsole(4 * Console.WindowWidth / 5, 10, "Score: " + score, ConsoleColor.White);
+            PrintStringOnConsole(4 * Console.WindowWidth / 5, 15, "High Score:", ConsoleColor.DarkCyan);
+            PrintStringOnConsole(4 * Console.WindowWidth / 5, 16, highScore.ToString(), ConsoleColor.DarkCyan);
 
             //Slow down program.
             Thread.Sleep((int)(100 - speed));
