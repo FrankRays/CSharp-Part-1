@@ -92,26 +92,6 @@ class FallingRocks
                     int chanceOfColor = randomGenerator.Next(0, 4);
                     smallRock.c = typeOfRocks[chanceOfTypeOfRock];
                     smallRock.color = colors[chanceOfColor]; ;
-                    //if (chance < 15)
-                    //{
-                    //    smallRock.str = "%";
-                    //    smallRock.color = ConsoleColor.DarkGray;
-                    //}
-                    //else if (chance > 7 && chance < 50)
-                    //{
-                    //    smallRock.str = "@";
-                    //    smallRock.color = ConsoleColor.DarkMagenta;
-                    //}
-                    //else if (chance > 50 && chance < 80)
-                    //{
-                    //    smallRock.str = "+";
-                    //    smallRock.color = ConsoleColor.Yellow;
-                    //}
-                    //else
-                    //{
-                    //    smallRock.str = "/";
-                    //    smallRock.color = ConsoleColor.Blue;
-                    //}
                     rocks.Add(smallRock);
                 }
             }
