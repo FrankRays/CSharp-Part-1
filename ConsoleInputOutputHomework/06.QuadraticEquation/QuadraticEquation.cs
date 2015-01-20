@@ -1,5 +1,6 @@
 ﻿//Write a program that reads the coefficients a, b and c of a quadratic equation 
 //ax2 + bx + c = 0 and solves it (prints its real roots).
+
 using System;
 class QuadraticEquation
 {
@@ -22,6 +23,5 @@ class QuadraticEquation
             Console.WriteLine("x1 = {0:0.00}", 0.5 * (-linearCoefficient - Math.Sqrt(discriminant)) / quadraticCoefficient);
             Console.WriteLine("x2 = {0:0.00}", 0.5 * (-linearCoefficient + Math.Sqrt(discriminant)) / quadraticCoefficient);
         }
-        Main();
     }
 }

@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Numbers1toN", "08.Number
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.SumOfNNumbers", "09.SumOfNNumbers\09.SumOfNNumbers.csproj", "{EF724F76-C5DD-4E8E-B8AB-1B6DA510AFEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.FibonacciNummbers", "10.FibonacciNummbers\10.FibonacciNummbers.csproj", "{85583C46-529E-4A80-AC1D-48021F902A6C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.FibonacciNumbers", "10.FibonacciNumbers\10.FibonacciNumbers.csproj", "{85583C46-529E-4A80-AC1D-48021F902A6C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.DivisibleNumbersInInterval", "11.DivisibleNumbersInInterval\11.DivisibleNumbersInInterval.csproj", "{6F4756A5-5F65-4C32-8EC7-130A3AC6C555}"
 EndProject

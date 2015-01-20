@@ -7,6 +7,7 @@
 //      Then the number a should be printed in binary form, padded with zeroes
 //      The number b should be printed with 2 digits after the decimal point, right aligned
 //      The number c should be printed with 3 digits after the decimal point, left aligned.
+
 using System;
 class FormattingNumbers
 {
@@ -15,6 +16,7 @@ class FormattingNumbers
         int firstNumber = Int32.Parse(Console.ReadLine());
         float secondNumber = Single.Parse(Console.ReadLine());
         float thirdNumber = Single.Parse(Console.ReadLine());
-        Console.WriteLine("{0,-10:X}|{1}|{2,10:F2}|{3,-10:F3}",firstNumber,Convert.ToString(firstNumber,2).PadLeft(10,'0'),secondNumber,thirdNumber);
+        Console.WriteLine();
+        Console.WriteLine("|{0,-10:X}|{1}|{2,10:F2}|{3,-10:F3}|",firstNumber,Convert.ToString(firstNumber,2).PadLeft(10,'0'),secondNumber,thirdNumber);
     }
 }

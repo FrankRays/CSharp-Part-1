@@ -1,6 +1,7 @@
 ﻿//A company has name, address, phone number, fax number, web site and manager.
 //The manager has first name, last name, age and a phone number.
 //Write a program that reads the information about a company and its manager and prints it back on the console.
+
 using System;
 class PrintCompanyInformation
 {
@@ -24,7 +25,9 @@ class PrintCompanyInformation
         byte managerAge = (byte)int.Parse(Console.ReadLine());
         Console.Write("Manager phone number: ");
         string managerPhoneNumber = Console.ReadLine();
+
         Console.Clear();
+
         Console.WriteLine(companyName);
         Console.WriteLine("Address: {0}", companyAddress);
         Console.WriteLine("Tel. {0}", phoneNumber);
