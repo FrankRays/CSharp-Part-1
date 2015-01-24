@@ -4,9 +4,9 @@ class ComparingFloats
 {
     static void Main()
     {
-        double a = double.Parse(Console.ReadLine());
-        double b = double.Parse(Console.ReadLine());
-        double eps = 1E-6;
+        decimal a = decimal.Parse(Console.ReadLine());
+        decimal b = decimal.Parse(Console.ReadLine());
+        decimal eps = 1E-6M;
         Console.WriteLine("Approximately equal (precision 1E-6)?");
         Console.WriteLine(Math.Abs(a - b) < eps);
     }
