@@ -3,6 +3,7 @@
 //there are 2598960 ways to withdraw 5 cards out of a standard deck of 52 cards.
 //Your task is to write a program that calculates n! / (k! * (n-k)!) for given n and k (1 < k < n < 100). 
 //Try to use only two loops.
+
 using System;
 class NChooseKCalculation
 {

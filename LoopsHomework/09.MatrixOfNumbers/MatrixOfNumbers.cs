@@ -1,5 +1,6 @@
 ﻿//Write a program that reads from the console a positive integer number n (1 = n = 20) 
 //and prints a matrix like in the example. Use two nested loops.
+
 using System;
 class MatrixOfNumbers
 {
