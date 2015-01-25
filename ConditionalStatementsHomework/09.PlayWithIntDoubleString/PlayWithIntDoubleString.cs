@@ -2,6 +2,7 @@
 //If the variable is int or double, the program increases it by one.
 //If the variable is a string, the program appends * at the end.
 //Print the result at the console. Use switch statement.
+
 using System;
 class PlayWithIntDoubleString
 {

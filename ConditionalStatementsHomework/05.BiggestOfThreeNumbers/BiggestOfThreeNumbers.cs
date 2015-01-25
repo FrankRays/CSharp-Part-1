@@ -1,4 +1,5 @@
 ﻿//Write a program that finds the biggest of three numbers.
+
 using System;
 class BiggestOfThreeNumbers
 {
@@ -13,17 +14,32 @@ class BiggestOfThreeNumbers
 
         if (firstNumber > secondNumber)
         {
-            if (secondNumber > thirdNumber) Console.WriteLine(firstNumber);
+            if (secondNumber > thirdNumber)
+            {
+                Console.WriteLine(firstNumber);
+            }
             else
             {
-                if (firstNumber > thirdNumber) Console.WriteLine(firstNumber);
-                else Console.WriteLine(thirdNumber);
+                if (firstNumber > thirdNumber)
+                {
+                    Console.WriteLine(firstNumber);
+                }
+                else
+                {
+                    Console.WriteLine(thirdNumber);
+                }
             }
         }
         else
         {
-            if (secondNumber < thirdNumber) Console.WriteLine(thirdNumber);
-            else Console.WriteLine(secondNumber);
+            if (secondNumber < thirdNumber)
+            {
+                Console.WriteLine(thirdNumber);
+            }
+            else
+            {
+                Console.WriteLine(secondNumber);
+            }
         }
     }
 }

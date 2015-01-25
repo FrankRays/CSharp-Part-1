@@ -1,4 +1,5 @@
 ﻿//We are given 5 integer numbers. Write a program that finds all subsets of these numbers whose sum is 0.
+
 using System;
 using System.Collections.Generic;
 using Combinatorics.Collections;
@@ -48,6 +49,5 @@ class ZeroSubset
         {
             Console.WriteLine("No zero subset.");
         }
-        Main();
     }
 }
