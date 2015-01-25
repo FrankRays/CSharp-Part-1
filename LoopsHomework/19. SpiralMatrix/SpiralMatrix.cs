@@ -72,7 +72,6 @@ class SpiralMatrix
                 Console.Write("{0}\t",matrix[row, col]);
             }
             Console.WriteLine();
-            //Console.WriteLine();
         }
     }
 }
