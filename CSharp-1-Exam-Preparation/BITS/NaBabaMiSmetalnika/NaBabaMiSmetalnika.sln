@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaBabaMiSmetaloto", "NaBabaMiSmetaloto\NaBabaMiSmetaloto.csproj", "{9045D9E9-A6D4-494F-984F-DEB4B75377A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaBabaMiSmetalnika", "NaBabaMiSmetalnika\NaBabaMiSmetalnika.csproj", "{9045D9E9-A6D4-494F-984F-DEB4B75377A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

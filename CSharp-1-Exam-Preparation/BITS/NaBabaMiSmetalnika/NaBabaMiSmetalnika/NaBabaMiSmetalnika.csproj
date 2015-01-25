@@ -7,8 +7,8 @@
     <ProjectGuid>{9045D9E9-A6D4-494F-984F-DEB4B75377A2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NaBabaMiSmetaloto</RootNamespace>
-    <AssemblyName>NaBabaMiSmetaloto</AssemblyName>
+    <RootNamespace>NaBabaMiSmetalnika</RootNamespace>
+    <AssemblyName>NaBabaMiSmetalnika</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NaBabaMiSmetaloto.cs" />
+    <Compile Include="NaBabaMiSmetalnika.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

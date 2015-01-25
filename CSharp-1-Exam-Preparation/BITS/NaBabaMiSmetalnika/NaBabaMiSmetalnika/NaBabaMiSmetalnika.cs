@@ -1,5 +1,5 @@
 ﻿using System;
-class NaBabaMiSmetaloto
+class NaBabaMiSmetalnika
 {
     static void Main()
     {
@@ -35,7 +35,7 @@ class NaBabaMiSmetaloto
                 fingerCol = int.Parse(Console.ReadLine());
             }
 
-                //Sets the correct position when outside the smetalo.
+                //Sets the correct position when outside the smetalnik.
             if (fingerCol < 0)
             {
                 fingerCol = 0;
