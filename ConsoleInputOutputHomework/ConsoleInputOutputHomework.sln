@@ -27,8 +27,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.DivisibleNumbersInInterv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.FallingRocks", "12.FallingRocks\12.FallingRocks.csproj", "{D0E54D01-A3F7-4157-981B-F46909C1A627}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{0E172737-49A8-462A-B783-C724AEDC6137}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,10 +81,6 @@ Global
 		{D0E54D01-A3F7-4157-981B-F46909C1A627}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0E54D01-A3F7-4157-981B-F46909C1A627}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0E54D01-A3F7-4157-981B-F46909C1A627}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0E172737-49A8-462A-B783-C724AEDC6137}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E172737-49A8-462A-B783-C724AEDC6137}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E172737-49A8-462A-B783-C724AEDC6137}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E172737-49A8-462A-B783-C724AEDC6137}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
