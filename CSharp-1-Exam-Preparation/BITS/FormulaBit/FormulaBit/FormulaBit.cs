@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
@@ -225,3 +226,6 @@ namespace FormulaBit1Project
         }
     }
 }
+=======
+﻿
+>>>>>>> af226c7a208d97bef46ecb3bc67cdca256c90666

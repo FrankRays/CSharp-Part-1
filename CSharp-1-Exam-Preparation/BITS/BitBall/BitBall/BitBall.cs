@@ -86,5 +86,13 @@ class BitBall
 
         //OUTPUT
         Console.WriteLine("{0}:{1}", goalsX, goalsY);
+        //for (int row = 0; row < height; row++)
+        //{
+        //    for (int col = 0; col < width; col++)
+        //    {
+        //        Console.Write(matrix[row, col]);
+        //    }
+        //    Console.WriteLine();
+        //}
     }
 }
