@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaBit", "FormulaBit\FormulaBit.csproj", "{5DDE7B51-C9DF-479E-9E8B-205423D8426F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaOneBit", "FormulaOneBit\FormulaOneBit.csproj", "{8BEAFD15-087E-4D67-880D-1DC9B276C69C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5DDE7B51-C9DF-479E-9E8B-205423D8426F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DDE7B51-C9DF-479E-9E8B-205423D8426F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DDE7B51-C9DF-479E-9E8B-205423D8426F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BEAFD15-087E-4D67-880D-1DC9B276C69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BEAFD15-087E-4D67-880D-1DC9B276C69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BEAFD15-087E-4D67-880D-1DC9B276C69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BEAFD15-087E-4D67-880D-1DC9B276C69C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

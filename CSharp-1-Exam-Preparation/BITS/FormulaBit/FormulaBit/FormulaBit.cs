@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -226,6 +225,3 @@ namespace FormulaBit1Project
         }
     }
 }
-=======
-﻿
->>>>>>> af226c7a208d97bef46ecb3bc67cdca256c90666
